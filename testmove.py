@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
-
+import time
 
 
 def create_drone_path(start, end, num_frames, max_d):
@@ -97,4 +97,6 @@ update.txt = None
 # Create animation with the maximum number of frames
 ani = FuncAnimation(fig, update, frames=max(frames1, frames2), interval=100/15, blit=True)
 
+#ani.save('animation.mp4', writer='ffmpeg')
+time.sleep(20)
 plt.show() 
